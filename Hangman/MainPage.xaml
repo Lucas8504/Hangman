@@ -14,7 +14,7 @@
             <Label
                 FontSize="40"
                 HorizontalOptions="Center"
-                Text=" bbb"
+                Text="{Binding Spotlight}"
                 VerticalOptions="Center" />
             <Label
                 FontSize="Large"
