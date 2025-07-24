@@ -9,10 +9,43 @@
                 FontAttributes="Bold"
                 HorizontalOptions="Center"
                 Text="win" />
-            <Image HeightRequest="200" />
+            <Image HeightRequest="200" Source="img0.jpg" />
+
+            <Label
+                FontSize="40"
+                HorizontalOptions="Center"
+                Text=" bbb"
+                VerticalOptions="Center" />
+            <Label
+                FontSize="Large"
+                HorizontalTextAlignment="Center"
+                Text="ggg" />
+
+            <Button
+                HorizontalOptions="Center"
+                Text="Reset"
+                WidthRequest="100" />
 
 
         </VerticalStackLayout>
+
+        <FlexLayout
+            x:Name="LettersContainer"
+            Grid.Row="1"
+
+            JustifyContent="SpaceEvenly"
+            Wrap="Wrap">
+            <BindableLayout.ItemTemplate>
+                <DataTemplate>
+                    <Button
+                        HeightRequest="50"
+                        Text=" ejp"
+                        WidthRequest="50" />
+                </DataTemplate>
+            </BindableLayout.ItemTemplate>
+
+        </FlexLayout>
+
     </Grid>
 
 
