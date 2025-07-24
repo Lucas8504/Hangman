@@ -32,14 +32,14 @@
         <FlexLayout
             x:Name="LettersContainer"
             Grid.Row="1"
-
+            BindableLayout.ItemsSource="{Binding Letters}"
             JustifyContent="SpaceEvenly"
             Wrap="Wrap">
             <BindableLayout.ItemTemplate>
                 <DataTemplate>
                     <Button
                         HeightRequest="50"
-                        Text=" ejp"
+                        Text="{Binding .}"
                         WidthRequest="50" />
                 </DataTemplate>
             </BindableLayout.ItemTemplate>

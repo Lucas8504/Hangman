@@ -16,6 +16,16 @@ namespace Hangman
             }
         }
 
+        public List<char> Letters
+        {
+            get => letters;
+            set
+            {
+                letters = value;
+                OnPropertyChanged();
+            }
+        }
+
         #endregion
 
         #region Fields  
@@ -36,14 +46,16 @@ namespace Hangman
                        "snippets"
                    };
         string answer = "";
-        private string spotlight = string.Empty; // Initialize to avoid nullability warning
+        private string spotlight = string.Empty;
         List<char> guessed = new List<char>();
+        private List<char> letters = new List<char>();
 
         #endregion
 
         public MainPage()
         {
             InitializeComponent();
+            Letters.AddRange("abcdefghijklmnopqrstuvwxyz");
             BindingContext = this;
             PickWord();
             CalculateWord(answer, guessed);
