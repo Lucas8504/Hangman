@@ -79,6 +79,21 @@ namespace Hangman
         }
 
         #endregion
+
+       
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            var btn = sender as Button;
+            if (btn != null)
+            {
+                var letter = btn.Text;
+                btn.IsEnabled = false;
+                HandleGuess(letter[0]);
+            }
+        }
+
+        
     }
 
 }
