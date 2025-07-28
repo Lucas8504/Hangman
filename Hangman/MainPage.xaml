@@ -1,13 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Hangman.MainPage">
+             x:Class="Hangman.MainPage"
+             BackgroundColor="#1F1F1F">
 
     <Grid RowDefinitions=".6*,.4*">
         <VerticalStackLayout Spacing="10">
             <Label
                 FontAttributes="Bold"
                 HorizontalOptions="Center"
+                TextColor="AntiqueWhite"
+                FontSize="18"
                 Text="{Binding GameStatus}"/>
             <Image HeightRequest="200" Source="{Binding CurrentImage}"/>
 
@@ -15,11 +18,13 @@
                 FontSize="40"
                 HorizontalOptions="Center"
                 Text="{Binding Spotlight}"
+                TextColor="AntiqueWhite"
                 VerticalOptions="Center" />
 
             <Label
                 FontSize="Large"
                 HorizontalTextAlignment="Center"
+                TextColor="AntiqueWhite"
                 Text="{Binding Message}" />
 
             <Button
@@ -40,9 +45,12 @@
                 <DataTemplate>
                     <Button
                         HeightRequest="50"
+                        TextColor="AntiqueWhite"
+                        FontSize="18"
                         Text="{Binding .}"
                         WidthRequest="50"
-                        Clicked="Button_Clicked"/>
+                        Clicked="Button_Clicked"
+                        BackgroundColor="#3B333D"/>
                 </DataTemplate>
             </BindableLayout.ItemTemplate>
 
